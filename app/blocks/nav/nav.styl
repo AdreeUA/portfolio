@@ -1,0 +1,41 @@
+.nav
+	font-family $font-second
+	font-size rem(15px)
+	text-transform uppercase
+	line-height 1.35
+	
+	+below('s')
+		position absolute
+		transform translateX(-100%)
+		transition transform .6s cubic-bezier(.56, .1, .34, .91)
+		padding-top rem(30px)
+		width 100%
+		left 0
+		top $height-menu
+		text-align center
+		font-size rem(20px)
+		background-color rgba($bg-color-main, .9)
+		min-height 100vh
+	
+		&__link
+			display block
+			padding 5px
+			
+	&_open
+		position fixed
+		transform translateX(0)
+		
+	&__item
+		&_block
+			margin-top rem(24px)
+			
+			+below('s')
+				margin-top 0
+	
+	&__link
+		color inherit
+		text-decoration none
+			
+		&_active
+			color $color-second
+			cursor default

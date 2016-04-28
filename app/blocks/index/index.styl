@@ -1,0 +1,80 @@
+.index
+	
+	.sect&
+		+below('xs')
+			padding-x(0)
+	
+	&__contact
+	&__skills
+	&__about
+	&__projects
+	&__about-list	
+		padding rem(38px) rem(20px)
+		box-shadow 0 0 50px rgba(#000, .75)
+		margin-bottom rem(30px)
+	
+	&__about
+		clearfix()
+	
+	&__avatar-wrap
+		overflow hidden
+		size(110px)
+		border-radius 50%
+		float left
+		margin-right rem(30px)
+		transition all .5s
+		display block
+		
+		&:hover
+			border 1px solid $color-hover
+	
+	&__avatar
+		width 100%
+		height auto
+		display block
+		
+	.title
+		line-height 1.2
+		margin-bottom 10px
+		font-weight 700
+		
+	&__subtitle
+		line-height 1.2
+		margin-bottom rem(38px)
+		
+	&__heading
+		margin-bottom rem(40px)
+		
+	&__link:not(.index__link_title)
+		position relative
+		display inline-block
+	
+		&:before
+			content ''
+			position absolute
+			border 1px solid $color-second
+			width 2000px
+			top 50%
+			left -2020px		
+		&:after
+			content ''
+			position absolute
+			border 1px solid $color-second
+			width 2000px
+			top 50%
+			right -2020px
+		
+		&:hover
+			&:after
+			&:before
+				transition all .5s
+				border-color $color-hover
+				
+	&__contact
+		text-align center
+				
+	&__btn
+		min-width 500px
+		
+		+below('s')
+			min-width 50%

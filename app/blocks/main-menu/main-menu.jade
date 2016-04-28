@@ -1,0 +1,12 @@
+include ../logo/logo
+include ../nav/nav
+include ../social/social
+
+mixin main-menu()
+	+b.HEADER.main-menu&attributes(attributes)#main-menu
+		+logo.__logo
+		+nav.__nav
+		+social.__social
+		+e.burger-wrap
+			+e.BUTTON.burger#burger-button
+				+e.SPAN.burger-icon

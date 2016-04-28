@@ -1,0 +1,11 @@
+extends /blocks/layout-default/layout-default
+include /blocks/about/about
+
+block head
+	- var pageTitle = 'Обо мне || Front-end разработчик: Змиевской Андрей';
+
+block vars
+	- var pageId = 3;
+
+block content
+	+about

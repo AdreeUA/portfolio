@@ -1,0 +1,43 @@
+.about
+	
+	&__heading.heading
+		color $color-second
+		text-align left
+		margin-bottom rem(20px)
+	
+	&__content
+		margin-y(rem(38px))
+		clearfix()
+	
+	&__avatar
+		width rem(196px)
+		height rem(297px)
+		float left
+		margin 0 rem(27px) rem(25px) 0
+	
+		+below('xs')
+			float none
+			width 100%
+			height auto
+			
+	&__disc
+		line-height 1.5
+		font-size rem(15px)
+		margin-bottom rem(20px)
+		
+		+below('s')
+			font-size rem(18px)
+		
+		// &:first-letter
+		// 	margin-left 20px
+		
+		&:last-of-type
+			margin-bottom rem(38px)
+		
+	&__work 
+		.my-skills__item
+			width 100%
+			font-size rem(20px)
+			
+	.my-skills
+		margin-bottom rem(38px)

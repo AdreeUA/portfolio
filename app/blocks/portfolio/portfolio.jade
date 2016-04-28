@@ -1,0 +1,47 @@
+include ../btn/btn
+include ../projects/projects
+include ../project/project
+
+mixin portfolio()
+	+b.SECTION.portfolio&attributes(attributes).sect
+		+projects
+			+project
+				+e.content
+					+e.image-wrap
+						+e.IMG.image(src="assets/images/atlantida.png" alt="Atlantida")
+					+e.H2.title Atlantida
+					+e.P.text
+						| Сделал адаптивную верстку лендинга 
+						+e.link(href="#") Atlantida 
+						| с использование сетки фрейморка Bootstap. Подключил слайдер Slick и сделал простой эффект Parallax для всей странице. Также настроил фильтр работ Portfolio с использованием Masonry (с англ. кирпичная кладка)
+				+e.btn
+					+btn Посмотреть
+
+			+project
+				+e.content
+					+e.image-wrap
+						+e.IMG.image(src="assets/images/agenzia.png" alt="agenzia")
+					+e.H2.title Agenzia
+					+e.P.text
+						| Адаптивно сверстал многостраничный сайт дизайн студии Agenzia. В проекте 7 страниц. Из них 
+						+e.link(href="#") Главная, 
+						+e.link(href="#") Работы, 
+						+e.link(href="#") Каталог товаров, 
+						+e.link(href="#") Карточка товара, 
+						+e.link(href="#") Ошибка 404, 
+						+e.link(href="#") Форум, 
+						| а также 
+						+e.link(href="#") Страница отдельного поста
+				+e.btn
+					+btn Посмотреть
+
+			+project
+				+e.content
+					+e.image-wrap
+						+e.IMG.image(src="assets/images/mike.png" alt="mike")
+					+e.H2.title Mike
+					+e.P.text
+						+e.link(href="#") Лендинт 
+						| дизайн студии Mike
+				+e.btn
+					+btn Посмотреть

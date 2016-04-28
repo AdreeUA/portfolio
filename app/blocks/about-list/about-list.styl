@@ -1,0 +1,33 @@
+.about-list
+	display flex
+	flex-wrap wrap
+	justify-content space-around
+	padding-y(38px)
+	
+	&__item
+		margin-bottom rem(38px)
+		width 30%
+		vertical-align top
+		padding rem(15px)
+		line-height 1.5
+		box-shadow 0 0 50px rgba(#000, .75)
+		text-align center
+		border-radius 4px
+		transition all .5s
+		
+		&:hover
+			border-color $color-hover
+			
+		+below('s')
+			width 45%
+		+below('xs')
+			width 95%
+		
+	&__text
+		margin-bottom rem(20px)
+		text-align justify
+
+		
+	&__icon
+		size(rem(70px))
+		margin-bottom rem(10px)

@@ -1,0 +1,106 @@
+.main-menu
+	width $width-menu
+	min-height 100%
+	padding-x(rem(28px))
+	padding-top rem(40px)
+	position absolute
+	top 0
+	background-color $bg-color-second
+	box-shadow 0 0 50px rgba(#000, .75)
+	
+	+below('s')
+		width 100%
+		position fixed
+		z-index 10
+		min-height $height-menu
+		display flex
+		justify-content space-between
+		align-items center
+		padding-y(10px)
+
+	&__logo
+		margin-bottom rem(43px)
+		
+		+below('s')
+			margin-bottom 0
+		+below(320px)
+			display none
+
+	&__nav
+		margin-bottom rem(37px)
+		
+	.social
+		&__link
+			border 1px solid transparent
+				
+			&:hover
+				border 1px solid $color-main
+				border-radius 4px
+				
+	&__burger-wrap
+		display none
+		
+		+below('s')
+			display block
+				
+	&__burger
+		display block
+		position relative
+		background rgba(#000, .3)
+		width $button-radius
+		height $button-radius
+		border-radius 4px
+		text-align center
+		vertical-align middle
+		transition all .5s ease
+		border $button-line-height solid transparent
+		box-shadow 0 0 8px -2px #333
+		transition all .3s linear 0s
+		
+		&_open
+			border $button-line-height solid $color-second
+			box-shadow none
+			
+		&_open &-icon 
+			background transparent
+
+			&:before, &:after 
+				transform-origin 0 50%
+				width 20px
+
+			&:before 
+				transform rotateZ(.64350111rad)
+
+			&:after 
+				transform rotateZ(-.64350111rad)
+			
+	&__burger-icon
+		display inline-block
+		position absolute
+		background $color-second
+		margin 0 auto
+		width $burger-width
+		height $button-line-height
+		top 50%
+		left 0
+		right 0
+		transition all .5s ease
+		transform translateY(-.5 * $button-line-height)
+
+		&:before, &:after
+			content ''
+			position absolute
+			margin 0 auto
+			background $color-second
+			width $burger-width
+			height $button-line-height
+			left 0
+			right 0
+			transition all .5s ease
+	  
+	  
+		&:before 
+			bottom $burger-gutter
+
+		&:after 
+			top $burger-gutter

@@ -1,0 +1,25 @@
+mixin nav()
+	+b.NAV.nav&attributes(attributes)#navigation
+		block vars
+		- if(pageId == 1)
+			- active1 = "nav__link_active";
+		- else if(pageId == 2)
+			- active2 = "nav__link_active";
+		- else if(pageId == 3)
+			- active3 = "nav__link_active";
+		- else if(pageId == 4)
+			- active4 = "nav__link_active";
+		- else 
+			- active = "";
+
+		+e.UL.list
+			+e.item
+				+e.A.link(href="/" class="#{active1}") Главная
+			+e.item
+				+e.A.link(href="portfolio.html" class="#{active2}") Портфолио
+			+e.item_block
+				+e.A.link(href="about.html" class="#{active3}") Обо мне
+			+e.item
+				+e.A.link(href="contact.html" class="#{active4}") Контакты
+			//- +e.item_block
+				+e.A.link(href="#" ) Блог

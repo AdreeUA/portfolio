@@ -1,0 +1,18 @@
+include ../title/title
+include ../subtitle/subtitle
+include ../icon/icon
+include ../social/social
+include ../contact-form/contact-form
+
+mixin contact()
+	+b.SECTION.contact&attributes(attributes).sect
+		+title Давайте работать вместе
+		+subtitle.__subtitle Не стесняйтесь
+		+e.disc Вы можете связаться со мной любым удобным для Вас способом:
+		+e.inner
+			+e.social
+				p.social__title Контакты
+				+social
+			+contact-form.__form
+
+

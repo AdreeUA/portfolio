@@ -1,0 +1,11 @@
+extends /blocks/layout-default/layout-default
+include /blocks/contact/contact
+
+block head
+	- var pageTitle = 'Контакты || Front-end разработчик: Змиевской Андрей';
+
+block vars
+	- var pageId = 4;
+
+block content
+	+contact

@@ -1,6 +1,10 @@
 extends /blocks/layout-default/layout-default
+include /blocks/index/index
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Front-end разработчик: Змиевской Андрей';
+block vars
+	- var pageId = 1;
 
 block content
+	+index

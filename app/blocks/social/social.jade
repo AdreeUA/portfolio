@@ -1,0 +1,29 @@
+include ../icon/icon
+
+mixin social()
+	+b.UL.social&attributes(attributes)
+		
+		+e.item
+			+e.A.link_vk(href="https://vk.com/adree.zmey" title="Профиль во Вконтакте" target="_blank")
+				+icon("vk").icon
+				| Vkontakte: AdreeUA
+		+e.item
+			+e.A.link_phone(href="tel:+79384890753" title="Позвонить: +7 938 489 07 53")
+				+icon("phone").icon
+				| Тел.: +7 938 489 07 53
+		+e.item
+			+e.A.link_tw(href="https://github.com/adreeua" title="Профиль на GitHub" target="_blank")
+				+icon("github").icon
+				| GitHub: AdreeUA
+		+e.item
+			+e.A.link_linkedin(href="mailto:adreeua@gmail.com" title="Написать: adreeua@gmail.com")
+				+icon("email").icon
+				| Email: adreeua@gmail.com
+		+e.item
+			+e.A.link_linkedin(href="skype:andrew15011991" title="Добавать в друзья в Skype: Adnrew15011991" target="_blank")
+				+icon("skype").icon
+				| Skype: Andrew15011991
+		//- +e.item
+			+e.A.link_linkedin(href="#" title="Профиль в LinkedIn" target="_blank")
+				+icon("linkedin").icon
+				| Linkedin

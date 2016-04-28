@@ -1,0 +1,136 @@
+include ../title/title
+include ../subtitle/subtitle
+include ../my-skills/my-skills
+include ../projects/projects
+include ../projects/projects
+include ../project/project
+include ../icon/icon
+include ../btn/btn
+include ../heading/heading
+include ../about-list/about-list
+include ../icon/icon
+
+mixin index()
+	+b.SECTION.index&attributes(attributes).sect
+		+e.about
+			+e.A.avatar-wrap(href="about.html")
+				+e.IMG.avatar(src="assets/images/avatar.jpg" alt="#")
+			+title.__title 
+				a.index__link_title(href="about.html") Змиевской Андрей -
+					+e.SPAN.disc фронтенд разработчик
+			+subtitle.__subtitle Занимаюсь фронтенд разработкой и версткой сайтов.
+
+		+about-list.__about-list
+			+heading.index__heading
+				a.index__link(href="contact.html") Чем я занимаюсь
+			+e.item
+				+icon("computer").icon
+				+e.text Если Вам нужно из готового PSD-макета сделать <strong>качественный HTML/CSS шаблон</strong> для вашего сайта или почтовой рассылке, тогда Вы пришли по адресу.
+			+e.item
+				+icon("trophy").icon
+				+e.text Сделаю это <strong>быстро и качественно</strong>, с соблюдением всех сроков, с использованием последних технологий. Когда задача будет понятна, незамедлительно приступлю к ее выполнению.
+
+			+e.item
+				+icon("people").icon
+				+e.text Также Если Вам <strong>нужна в команду помощь</strong> верстальщика, то с радость откликнусь и помогу чем смогу. Умею работать как в одиночку, так и в команде.
+
+			+e.item
+				+icon("technology").icon
+				+e.text Я <strong>НЕ создаю "сайты под ключ"</strong>, а занимаюсь исключительно созданием HTML/CSS-шаблонов из готовых дизайнером макетов. 
+				+e.text Специальность довольно узкая, но зато я могу сосредоточиться на <strong>хорошем выполнение</strong> узко направленых задач.
+
+			+e.item
+				+icon("transport").icon
+				+e.text Моя работа максимально автоматизирована. Проект собирается сборщиком Gulp с использованием в качестве HTML-шаблонизатора <strong>Jade</strong> и CSS-препроцессора <strong>Stylus</strong>. 
+				+e.text Так же мне симпатизирует методология <strong>БЕМ</strong> от компании Yandex. Это помогает мне избавиться от рутинный задач и максимально сосредоточиться на выполнении более важных задач. 
+
+			+e.item
+				+icon("orientation").icon
+				+e.text Я <strong>жестко НЕ привязан</strong> к определенным технология. Нужно написать код на чистом HTML? Пожалуйста. Может использовать ванильный CSS? Да нет проблем. 
+				+e.text Я стараюсь избегать стереотипного мышления, поэтому могу и умею работать с разными <strong>современными Frontend-техлогиями.</strong>
+
+		+projects.__projects
+			+heading.index__heading
+				a.index__link(href="portfolio.html") Последние работы
+			+project
+				+e.content
+					+e.image-wrap
+						+e.IMG.image(src="assets/images/atlantida.png" alt="Atlantida")
+					+e.H2.title Atlantida
+					+e.P.text
+						| Сделал адаптивную верстку лендинга 
+						+e.link(href="#" target="_blank") Atlantida 
+						| с использование сетки фрейморка Bootstap. Подключил слайдер Slick и сделал простой эффект Parallax для всей странице. Также настроил фильтр работ Portfolio с использованием Masonry (с англ. кирпичная кладка)
+				+e.btn
+					+btn Посмотреть
+					
+			+project
+				+e.content
+					+e.image-wrap
+						+e.IMG.image(src="assets/images/agenzia.png" alt="Дизайн студия Agenzia")
+					+e.H2.title Agenzia
+					+e.P.text
+						| Адаптивно сверстал многостраничный сайт дизайн студии Agenzia. В проекте 7 страниц. Из них 
+						+e.link(href="#" target="_blank") Главная, 
+						+e.link(href="#" target="_blank") Работы, 
+						+e.link(href="#" target="_blank") Каталог товаров, 
+						+e.link(href="#" target="_blank") Карточка товара, 
+						+e.link(href="#" target="_blank") Ошибка 404, 
+						+e.link(href="#" target="_blank") Форум, 
+						| а также 
+						+e.link(href="#" target="_blank") Страница отдельного поста
+				+e.btn
+					+btn Посмотреть
+
+			+project
+				+e.content
+					+e.image-wrap
+						+e.IMG.image(src="assets/images/mike.png" alt="Дизайн студия Mike")
+					+e.H2.title Mike
+					+e.P.text
+						| Сверстал
+						+e.link(href="#" target="_blank") лендинг 
+						| дизайн студии Mike. Одна из первых мои работ.
+				+e.btn
+					+btn Посмотреть
+
+		+my-skills.__skills
+			+heading.index__heading
+				a.index__link(href="about.html") Что я умею
+			+e.item 
+				+icon("checkmark").icon
+				| Кроссбраузерная валидная семантическая вёрстка;
+			+e.item 
+				+icon("checkmark").icon
+				| Уверенное работать с PSD/Sketch-макетоми;
+			+e.item 
+				+icon("checkmark").icon
+				| Уверенное знание и понимание HTML, CSS;
+			+e.item 
+				+icon("checkmark").icon
+				| Владение нативным JavaScript;
+			+e.item 
+				+icon("checkmark").icon 
+				| Владение jQuery, использование jQ-плагинов;
+			+e.item 
+				+icon("checkmark").icon 
+				| Знание Sass/Scss, LESS, Stylus;
+			+e.item 
+				+icon("checkmark").icon 
+				| Знание Jade-шаблонизаторa;
+			+e.item 
+				+icon("checkmark").icon 
+				| Работа в команде, работа с чужим кодом;
+			+e.item 
+				+icon("checkmark").icon 
+				| Понимание ООП;
+			+e.item 
+				+icon("checkmark").icon 
+				| Умение работать с системами контроля версий (git);
+			+e.item 
+				+icon("checkmark").icon 
+				| Использование и понимание методологии БЕМ;
+
+		+e.contact
+			+btn(href="contact.html").__btn Связаться со мной
+

@@ -1,0 +1,23 @@
+.my-skills
+	font-size 0
+	
+	&__item
+		line-height 1.5
+		width 50%
+		font-size rem(16px)
+		display inline-block
+		vertical-align top
+		padding-right 30px
+		
+		&:hover
+			.my-skills__icon
+				color $color-hover
+				transition color .5s
+				
+		+below('s')
+			width 100%
+	
+	&__icon
+		size(rem(14px))
+		color $color-second
+		margin-right 10px

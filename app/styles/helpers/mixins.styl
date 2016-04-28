@@ -92,28 +92,27 @@ triangle(width = 10px, height = 10px, direction = 'bottom', color = #000)
 	{styles}
 	
 // Convert PX to REM
+// _strip-units
+// remove units of a number
+_strip-units( val )
+	unit( val, "" )
 
-// Default Variables
-$base--font-size ?= 16px
 
-rem($value, $base = $base--font-size)
-  $max = length($value)
+em( value, base = 16 )
+	value = _strip-units( value )
+	base = _strip-units( base )
+	value / base * 1em
 
-  $remValues = ()
-  for $i in (0...$max)
-    push($remValues, _convert-to-rem( $value[$i], $base ))
 
-  return $remValues
+rem( value, base = 16px )
+	u = unit(value)
+	base = _strip-units( base )
 
-_convert-to-rem($px, $base)
-  if $is-ie && $is-ie--version <= 8
-    ($px)px
-  else if (typeof($px) == 'unit')
-    if ((unit($px) == '' || unit($px) == 'px') && ($px != 0))
-      return (round($px / $base, 3))rem
-    else
-      return 0
-
+	if (u is 'px')
+		return unit(value / base, 'rem')
+	else
+		return unit(value, u)
+		
 // Центрирование по горизонтали блока заданной ширины
 container()
 	padding-left 186px

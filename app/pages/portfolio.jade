@@ -1,0 +1,10 @@
+extends /blocks/layout-default/layout-default
+include /blocks/portfolio/portfolio
+
+block head
+	- var pageTitle = 'Портфолио || Front-end разработчик: Змиевской Андрей';
+block vars
+	- var pageId = 2;
+
+block content
+	+portfolio
