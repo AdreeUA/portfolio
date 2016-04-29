@@ -52,6 +52,7 @@ mixin index()
 		+projects.__projects
 			+heading.index__heading
 				a.index__link(href="portfolio.html") Последние работы
+				
 			+project
 				+e.content
 					+e.image-wrap
@@ -62,7 +63,7 @@ mixin index()
 						+e.link(href="assets/project/atlantida/index.html" target="_blank") Atlantida 
 						| с использование сетки фрейморка Bootstap. Подключил слайдер Slick и сделал простой эффект Parallax для всей странице. Также настроил фильтр работ Portfolio с использованием Masonry (с англ. кирпичная кладка)
 				+e.btn
-					+btn Посмотреть
+					+btn(href="assets/project/atlantida/index.html" target="_blank") Посмотреть
 					
 			+project
 				+e.content
@@ -81,7 +82,7 @@ mixin index()
 						| а также 
 						+e.link(href="assets/project/agenzia/journal-post.html" target="_blank") Страница отдельного поста
 				+e.btn
-					+btn Посмотреть
+					+btn(href="assets/project/agenzia/index.html" target="_blank") Посмотреть
 
 			+project
 				+e.content
@@ -93,7 +94,7 @@ mixin index()
 						+e.link(href="assets/project/mike/index.html" target="_blank") лендинг 
 						| дизайн студии Mike. Одна из первых мои работ.
 				+e.btn
-					+btn Посмотреть
+					+btn(href="assets/project/mike/index.html" target="_blank") Посмотреть
 
 		+my-skills.__skills
 			+heading.index__heading
